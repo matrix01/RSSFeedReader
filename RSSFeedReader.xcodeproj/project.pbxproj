@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBB6C8C11CC62EC1000E3581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */; };
+		EBB6C8C31CC62EC1000E3581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8C21CC62EC1000E3581 /* ViewController.swift */; };
+		EBB6C8C61CC62EC1000E3581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8C41CC62EC1000E3581 /* Main.storyboard */; };
+		EBB6C8C81CC62EC1000E3581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8C71CC62EC1000E3581 /* Assets.xcassets */; };
+		EBB6C8CB1CC62EC1000E3581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8C91CC62EC1000E3581 /* LaunchScreen.storyboard */; };
+		EBB6C8D31CC62F89000E3581 /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8D21CC62F89000E3581 /* NewsFeed.swift */; };
+		EBB6C8F41CC6B696000E3581 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6C8F01CC6B696000E3581 /* Fabric.framework */; };
+		EBB6C8F51CC6B696000E3581 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */; };
+		EBB6C8F61CC6B696000E3581 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */; };
+		EBB6C8F71CC6B696000E3581 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EBB6C8BD1CC62EC1000E3581 /* RSSFeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBB6C8C21CC62EC1000E3581 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBB6C8C51CC62EC1000E3581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBB6C8C71CC62EC1000E3581 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBB6C8CA1CC62EC1000E3581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBB6C8CC1CC62EC1000E3581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB6C8D21CC62F89000E3581 /* NewsFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
+		EBB6C8F01CC6B696000E3581 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
+		EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = ../TwitterKit.framework; sourceTree = "<group>"; };
+		EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = ../TwitterCore.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBB6C8BA1CC62EC1000E3581 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB6C8F41CC6B696000E3581 /* Fabric.framework in Frameworks */,
+				EBB6C8F71CC6B696000E3581 /* TwitterCore.framework in Frameworks */,
+				EBB6C8F51CC6B696000E3581 /* TwitterKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBB6C8B41CC62EC0000E3581 = {
+			isa = PBXGroup;
+			children = (
+				EBB6C8BF1CC62EC1000E3581 /* RSSFeedReader */,
+				EBB6C8BE1CC62EC1000E3581 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBB6C8BE1CC62EC1000E3581 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBB6C8BD1CC62EC1000E3581 /* RSSFeedReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBB6C8BF1CC62EC1000E3581 /* RSSFeedReader */ = {
+			isa = PBXGroup;
+			children = (
+				EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */,
+				EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */,
+				EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */,
+				EBB6C8F01CC6B696000E3581 /* Fabric.framework */,
+				EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */,
+				EBB6C8C21CC62EC1000E3581 /* ViewController.swift */,
+				EBB6C8C41CC62EC1000E3581 /* Main.storyboard */,
+				EBB6C8C71CC62EC1000E3581 /* Assets.xcassets */,
+				EBB6C8C91CC62EC1000E3581 /* LaunchScreen.storyboard */,
+				EBB6C8CC1CC62EC1000E3581 /* Info.plist */,
+				EBB6C8D21CC62F89000E3581 /* NewsFeed.swift */,
+			);
+			path = RSSFeedReader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBB6C8BC1CC62EC1000E3581 /* RSSFeedReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB6C8CF1CC62EC1000E3581 /* Build configuration list for PBXNativeTarget "RSSFeedReader" */;
+			buildPhases = (
+				EBB6C8B91CC62EC1000E3581 /* Sources */,
+				EBB6C8BA1CC62EC1000E3581 /* Frameworks */,
+				EBB6C8BB1CC62EC1000E3581 /* Resources */,
+				EBB6C8EF1CC6B664000E3581 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSSFeedReader;
+			productName = RSSFeedReader;
+			productReference = EBB6C8BD1CC62EC1000E3581 /* RSSFeedReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBB6C8B51CC62EC0000E3581 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Milan Mia";
+				TargetAttributes = {
+					EBB6C8BC1CC62EC1000E3581 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = EBB6C8B81CC62EC0000E3581 /* Build configuration list for PBXProject "RSSFeedReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBB6C8B41CC62EC0000E3581;
+			productRefGroup = EBB6C8BE1CC62EC1000E3581 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBB6C8BC1CC62EC1000E3581 /* RSSFeedReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBB6C8BB1CC62EC1000E3581 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB6C8F61CC6B696000E3581 /* TwitterKitResources.bundle in Resources */,
+				EBB6C8CB1CC62EC1000E3581 /* LaunchScreen.storyboard in Resources */,
+				EBB6C8C81CC62EC1000E3581 /* Assets.xcassets in Resources */,
+				EBB6C8C61CC62EC1000E3581 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EBB6C8EF1CC6B664000E3581 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run d8bd1cd4fa09a16ad27b77420ae375706a3ce682 5eeed3c7df4e5d2102a5c0bc6e3fde76f4dede52879090872f0fae82e6ff9108";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBB6C8B91CC62EC1000E3581 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB6C8C31CC62EC1000E3581 /* ViewController.swift in Sources */,
+				EBB6C8C11CC62EC1000E3581 /* AppDelegate.swift in Sources */,
+				EBB6C8D31CC62F89000E3581 /* NewsFeed.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EBB6C8C41CC62EC1000E3581 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBB6C8C51CC62EC1000E3581 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBB6C8C91CC62EC1000E3581 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBB6C8CA1CC62EC1000E3581 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBB6C8CD1CC62EC1000E3581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBB6C8CE1CC62EC1000E3581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBB6C8D01CC62EC1000E3581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RSSFeedReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = saosx.com.RSSFeedReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EBB6C8D11CC62EC1000E3581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RSSFeedReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = saosx.com.RSSFeedReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBB6C8B81CC62EC0000E3581 /* Build configuration list for PBXProject "RSSFeedReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB6C8CD1CC62EC1000E3581 /* Debug */,
+				EBB6C8CE1CC62EC1000E3581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBB6C8CF1CC62EC1000E3581 /* Build configuration list for PBXNativeTarget "RSSFeedReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB6C8D01CC62EC1000E3581 /* Debug */,
+				EBB6C8D11CC62EC1000E3581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBB6C8B51CC62EC0000E3581 /* Project object */;
+}
