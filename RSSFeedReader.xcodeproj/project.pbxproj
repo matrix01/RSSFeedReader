@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB20B7FD1CC7700300E16391 /* DetailNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B7FC1CC7700300E16391 /* DetailNewsVC.swift */; };
 		EBB6C8C11CC62EC1000E3581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */; };
 		EBB6C8C31CC62EC1000E3581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8C21CC62EC1000E3581 /* ViewController.swift */; };
 		EBB6C8C61CC62EC1000E3581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8C41CC62EC1000E3581 /* Main.storyboard */; };
@@ -17,9 +18,12 @@
 		EBB6C8F51CC6B696000E3581 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */; };
 		EBB6C8F61CC6B696000E3581 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */; };
 		EBB6C8F71CC6B696000E3581 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */; };
+		EBFE0CC41CC72916006B443F /* ChannelSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE0CC31CC72916006B443F /* ChannelSelectionVC.swift */; };
+		EBFE0CC61CC72D8A006B443F /* ShowNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE0CC51CC72D8A006B443F /* ShowNewsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB20B7FC1CC7700300E16391 /* DetailNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailNewsVC.swift; sourceTree = "<group>"; };
 		EBB6C8BD1CC62EC1000E3581 /* RSSFeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB6C8C21CC62EC1000E3581 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = ../TwitterKit.framework; sourceTree = "<group>"; };
 		EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = ../TwitterCore.framework; sourceTree = "<group>"; };
+		EBFE0CC31CC72916006B443F /* ChannelSelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelSelectionVC.swift; sourceTree = "<group>"; };
+		EBFE0CC51CC72D8A006B443F /* ShowNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNewsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				EBB6C8C91CC62EC1000E3581 /* LaunchScreen.storyboard */,
 				EBB6C8CC1CC62EC1000E3581 /* Info.plist */,
 				EBB6C8D21CC62F89000E3581 /* NewsFeed.swift */,
+				EBFE0CC31CC72916006B443F /* ChannelSelectionVC.swift */,
+				EBFE0CC51CC72D8A006B443F /* ShowNewsVC.swift */,
+				EB20B7FC1CC7700300E16391 /* DetailNewsVC.swift */,
 			);
 			path = RSSFeedReader;
 			sourceTree = "<group>";
@@ -171,9 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB20B7FD1CC7700300E16391 /* DetailNewsVC.swift in Sources */,
 				EBB6C8C31CC62EC1000E3581 /* ViewController.swift in Sources */,
 				EBB6C8C11CC62EC1000E3581 /* AppDelegate.swift in Sources */,
+				EBFE0CC61CC72D8A006B443F /* ShowNewsVC.swift in Sources */,
 				EBB6C8D31CC62F89000E3581 /* NewsFeed.swift in Sources */,
+				EBFE0CC41CC72916006B443F /* ChannelSelectionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

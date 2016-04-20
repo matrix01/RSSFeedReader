@@ -28,27 +28,9 @@ class ViewController: UIViewController {
         }
         
         // TODO: Change where the log in button is positioned in your view
-        logInButton.center = self.view.center
+        logInButton.center.x = self.view.center.x
+        logInButton.center.y = self.view.center.y - 100
         self.view.addSubview(logInButton)
-
-        let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-        let newNewsFeed = newsFeed()
-        
-        dispatch_async(queue) { () -> Void in
-            newNewsFeed.getNewsFeedWithUrl("http://feeds.bbci.co.uk/news/rss.xml")
-            dispatch_async(dispatch_get_main_queue(), {
-                print("BBC Feed download finished!!")
-                print(newNewsFeed.feeds)
-            })
-        }
-        
-        dispatch_async(queue) { () -> Void in
-            newNewsFeed.getNewsFeedWithUrl("http://rss.cnn.com/rss/edition")
-            dispatch_async(dispatch_get_main_queue(), {
-                print("CNN Feed download finished!!")
-                print(newNewsFeed.feeds)
-            })
-        }
     }
 
     override func didReceiveMemoryWarning() {
