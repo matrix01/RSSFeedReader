@@ -12,6 +12,7 @@ class ShowNewsVC: UITableViewController {
     
     let newNewsFeed = newsFeed()
     internal var feedUrl: String = ""
+    let newsImage: NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +21,30 @@ class ShowNewsVC: UITableViewController {
         dispatch_async(queue) { () -> Void in
             self.newNewsFeed.getNewsFeedWithUrl(self.feedUrl)
             dispatch_async(dispatch_get_main_queue(), {
-                print("Feed download finished!!")
+                print(self.newNewsFeed.posts)
                 self.tableView.reloadData()
+                self.loadImage()
             })
         }
     }
-
+    
+    func loadImage() {
+        for post in self.newNewsFeed.posts {
+            let url = post.objectForKey("url") as! String
+            if !url.isEmpty {
+            let request = NSURLRequest(URL: NSURL(string: url)!)
+                NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
+                    if let imageData = data {
+                        self.newsImage.addObject(UIImage(data: imageData)!)
+                        dispatch_async(dispatch_get_main_queue(), {
+                            self.tableView.reloadData()
+                        })
+                    }
+                }
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -37,21 +56,33 @@ class ShowNewsVC: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.newNewsFeed.feeds.count
+        return self.newNewsFeed.posts.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("anotherCell", forIndexPath: indexPath)
-        //print(self.newNewsFeed.feeds.objectAtIndex(indexPath.row).objectForKey("link") as? String)
-        let label: UILabel = cell.viewWithTag(100) as! UILabel
-        label.text = self.newNewsFeed.feeds.objectAtIndex(indexPath.row).objectForKey("title") as? String
+        
+        let titleLabel: UILabel = cell.viewWithTag(100) as! UILabel
+        titleLabel.text = self.newNewsFeed.posts.objectAtIndex(indexPath.row).valueForKey("title") as? String
+        
+        let descriptionLabel: UILabel = cell.viewWithTag(101) as! UILabel
+        descriptionLabel.text = self.newNewsFeed.posts.objectAtIndex(indexPath.row).valueForKey("description") as? String
+        
+        let dateLabel: UILabel = cell.viewWithTag(102) as! UILabel
+        dateLabel.text = self.newNewsFeed.posts.objectAtIndex(indexPath.row).valueForKey("pubDate") as? String
+        
+        let newsImageView: UIImageView = cell.viewWithTag(105) as! UIImageView
+        if newsImage.count > 0 && indexPath.row < newsImage.count {
+            let imageForNews = newsImage.objectAtIndex(indexPath.row)
+            newsImageView.image = imageForNews as! UIImage
+        }
+        
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let destination = storyboard.instantiateViewControllerWithIdentifier("detailNews") as! DetailNewsVC
-        destination.webLink = (self.newNewsFeed.feeds.objectAtIndex(indexPath.row).objectForKey("link") as? String)!
+        destination.webLink = (self.newNewsFeed.posts.objectAtIndex(indexPath.row).objectForKey("link") as? String)!
         
         navigationController?.pushViewController(destination, animated: true)
     }

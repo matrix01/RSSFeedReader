@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EB20B7FD1CC7700300E16391 /* DetailNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB20B7FC1CC7700300E16391 /* DetailNewsVC.swift */; };
+		EB383D4E1CC8C2A00082B024 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB383D4D1CC8C2A00082B024 /* FBSDKCoreKit.framework */; };
+		EB383D501CC8C2AB0082B024 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB383D4F1CC8C2AB0082B024 /* FBSDKLoginKit.framework */; };
+		EB383D521CC8C2BD0082B024 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB383D511CC8C2BD0082B024 /* FBSDKShareKit.framework */; };
 		EBB6C8C11CC62EC1000E3581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */; };
 		EBB6C8C31CC62EC1000E3581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8C21CC62EC1000E3581 /* ViewController.swift */; };
 		EBB6C8C61CC62EC1000E3581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8C41CC62EC1000E3581 /* Main.storyboard */; };
@@ -18,12 +21,18 @@
 		EBB6C8F51CC6B696000E3581 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */; };
 		EBB6C8F61CC6B696000E3581 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */; };
 		EBB6C8F71CC6B696000E3581 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */; };
+		EBD8679B1CC81A3200BD9CBF /* bbc.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD8679A1CC81A3200BD9CBF /* bbc.png */; };
+		EBD8679D1CC828D700BD9CBF /* clk.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD8679C1CC828D700BD9CBF /* clk.png */; };
+		EBD8679F1CC8811300BD9CBF /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBD8679E1CC8811300BD9CBF /* background.jpg */; };
 		EBFE0CC41CC72916006B443F /* ChannelSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE0CC31CC72916006B443F /* ChannelSelectionVC.swift */; };
 		EBFE0CC61CC72D8A006B443F /* ShowNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE0CC51CC72D8A006B443F /* ShowNewsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB20B7FC1CC7700300E16391 /* DetailNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailNewsVC.swift; sourceTree = "<group>"; };
+		EB383D4D1CC8C2A00082B024 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		EB383D4F1CC8C2AB0082B024 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		EB383D511CC8C2BD0082B024 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		EBB6C8BD1CC62EC1000E3581 /* RSSFeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB6C8C21CC62EC1000E3581 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +45,9 @@
 		EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = ../TwitterKit.framework; sourceTree = "<group>"; };
 		EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = ../TwitterCore.framework; sourceTree = "<group>"; };
+		EBD8679A1CC81A3200BD9CBF /* bbc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bbc.png; sourceTree = "<group>"; };
+		EBD8679C1CC828D700BD9CBF /* clk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clk.png; sourceTree = "<group>"; };
+		EBD8679E1CC8811300BD9CBF /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		EBFE0CC31CC72916006B443F /* ChannelSelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelSelectionVC.swift; sourceTree = "<group>"; };
 		EBFE0CC51CC72D8A006B443F /* ShowNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNewsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +58,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB6C8F41CC6B696000E3581 /* Fabric.framework in Frameworks */,
+				EB383D4E1CC8C2A00082B024 /* FBSDKCoreKit.framework in Frameworks */,
+				EB383D521CC8C2BD0082B024 /* FBSDKShareKit.framework in Frameworks */,
+				EB383D501CC8C2AB0082B024 /* FBSDKLoginKit.framework in Frameworks */,
 				EBB6C8F71CC6B696000E3581 /* TwitterCore.framework in Frameworks */,
 				EBB6C8F51CC6B696000E3581 /* TwitterKit.framework in Frameworks */,
 			);
@@ -54,6 +69,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB383D531CC8C40D0082B024 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				EB383D511CC8C2BD0082B024 /* FBSDKShareKit.framework */,
+				EB383D4F1CC8C2AB0082B024 /* FBSDKLoginKit.framework */,
+				EB383D4D1CC8C2A00082B024 /* FBSDKCoreKit.framework */,
+				EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */,
+				EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */,
+				EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */,
+				EBB6C8F01CC6B696000E3581 /* Fabric.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		EB383D541CC8C4290082B024 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EBD8679A1CC81A3200BD9CBF /* bbc.png */,
+				EBD8679E1CC8811300BD9CBF /* background.jpg */,
+				EBD8679C1CC828D700BD9CBF /* clk.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		EBB6C8B41CC62EC0000E3581 = {
 			isa = PBXGroup;
 			children = (
@@ -73,10 +112,7 @@
 		EBB6C8BF1CC62EC1000E3581 /* RSSFeedReader */ = {
 			isa = PBXGroup;
 			children = (
-				EBB6C8F31CC6B696000E3581 /* TwitterCore.framework */,
-				EBB6C8F21CC6B696000E3581 /* TwitterKitResources.bundle */,
-				EBB6C8F11CC6B696000E3581 /* TwitterKit.framework */,
-				EBB6C8F01CC6B696000E3581 /* Fabric.framework */,
+				EB383D531CC8C40D0082B024 /* Framework */,
 				EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */,
 				EBB6C8C21CC62EC1000E3581 /* ViewController.swift */,
 				EBB6C8C41CC62EC1000E3581 /* Main.storyboard */,
@@ -87,6 +123,7 @@
 				EBFE0CC31CC72916006B443F /* ChannelSelectionVC.swift */,
 				EBFE0CC51CC72D8A006B443F /* ShowNewsVC.swift */,
 				EB20B7FC1CC7700300E16391 /* DetailNewsVC.swift */,
+				EB383D541CC8C4290082B024 /* Images */,
 			);
 			path = RSSFeedReader;
 			sourceTree = "<group>";
@@ -150,7 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD8679D1CC828D700BD9CBF /* clk.png in Resources */,
 				EBB6C8F61CC6B696000E3581 /* TwitterKitResources.bundle in Resources */,
+				EBD8679F1CC8811300BD9CBF /* background.jpg in Resources */,
+				EBD8679B1CC81A3200BD9CBF /* bbc.png in Resources */,
 				EBB6C8CB1CC62EC1000E3581 /* LaunchScreen.storyboard in Resources */,
 				EBB6C8C81CC62EC1000E3581 /* Assets.xcassets in Resources */,
 				EBB6C8C61CC62EC1000E3581 /* Main.storyboard in Resources */,
@@ -303,6 +343,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RSSFeedReader",
 				);
 				INFOPLIST_FILE = RSSFeedReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -318,6 +359,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RSSFeedReader",
 				);
 				INFOPLIST_FILE = RSSFeedReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

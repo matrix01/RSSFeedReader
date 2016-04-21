@@ -8,34 +8,41 @@
 
 import UIKit
 import TwitterKit
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let logInButton = TWTRLogInButton { (session, error) in
-            if let unwrappedSession = session {
-                let alert = UIAlertController(title: "Logged In",
-                    message: "User \(unwrappedSession.userName) has logged in",
-                    preferredStyle: UIAlertControllerStyle.Alert
-                )
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            } else {
-                NSLog("Login error: %@", error!.localizedDescription);
-            }
-        }
-        
-        // TODO: Change where the log in button is positioned in your view
-        logInButton.center.x = self.view.center.x
-        logInButton.center.y = self.view.center.y - 100
-        self.view.addSubview(logInButton)
     }
 
+    @IBAction func twitterLoginButton(sender: AnyObject) {
+        Twitter.sharedInstance().logInWithCompletion { session, error in
+            if (session != nil) {
+                self.performSegueWithIdentifier("changeListVC", sender: nil)
+            } else {
+                print("error: \(error!.localizedDescription)");
+            }
+        }
+    }
+    
+    @IBAction func facebookLoginButton(sender: AnyObject) {
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result, error) -> Void in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
+                if(fbloginresult.grantedPermissions.contains("email")) {
+                    self.performSegueWithIdentifier("changeListVC", sender: nil)
+                }
+            } else {
+                print("error: \(error!.localizedDescription)");
+            }
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
