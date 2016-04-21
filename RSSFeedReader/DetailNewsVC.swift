@@ -8,35 +8,35 @@
 
 import UIKit
 import TwitterKit
+import FBSDKShareKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class DetailNewsVC: UIViewController, TWTRComposerViewControllerDelegate {
+class DetailNewsVC: UIViewController, FBSDKSharingDelegate, TWTRComposerViewControllerDelegate {
 
     @IBOutlet weak var detailNewsView: UIWebView!
     internal var webLink: String = ""
+    internal var contentTitle: String = ""
+    internal var contentDesc: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(webLink)
         UIWebView.loadRequest(detailNewsView)(NSURLRequest(URL: NSURL(string: webLink)!))
     }
 
     @IBAction func shareSocialMedia(sender: AnyObject) {
-        let actionSheetController: UIAlertController = UIAlertController(title: "Action Sheet", message: "Swiftly Now! Choose an option!", preferredStyle: .ActionSheet)
+        let actionSheetController: UIAlertController = UIAlertController(title: "Action Sheet", message: "Share news! Choose an option!", preferredStyle: .ActionSheet)
         
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         actionSheetController.addAction(cancelAction)
         let shareTwitter: UIAlertAction = UIAlertAction(title: "Share Twitter", style: .Default) { action -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
             
-            // Swift
             let composer = TWTRComposer()
-            
             composer.setText(self.webLink)
             composer.setImage(UIImage(named: "fabric"))
             
-            // Called from a UIViewController
             composer.showFromViewController(self) { result in
                 if (result == TWTRComposerResult.Cancelled) {
                     print("Tweet composition cancelled")
@@ -45,33 +45,37 @@ class DetailNewsVC: UIViewController, TWTRComposerViewControllerDelegate {
                     print("Sending tweet!")
                 }
             }
-            
-            /*let store = Twitter.sharedInstance().sessionStore
-            if let userid = store.session()?.userID {
-                let client = TWTRAPIClient(userID: userid)
-                let statusesShowEndpoint = "https://api.twitter.com/1.1/statuses/update.json"
-                let params = ["status": "My First Tweet!", "url" : self.webLink]
-                var clientError : NSError?
-                
-                let request = client.URLRequestWithMethod("POST", URL: statusesShowEndpoint, parameters: params, error: &clientError)
-                client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
-                    if (connectionError == nil) {
-                    }
-                    else {
-                        print("Error: \(connectionError)")
-                    }
-                }
-            }*/
         }
         
         actionSheetController.addAction(shareTwitter)
         
-        let choosePictureAction: UIAlertAction = UIAlertAction(title: "Share Facebook", style: .Default) { action -> Void in
+        let shareFacebook: UIAlertAction = UIAlertAction(title: "Share Facebook", style: .Default) { action -> Void in
+            let content : FBSDKShareLinkContent = FBSDKShareLinkContent()
+            content.contentURL = NSURL(string: self.webLink)
+            content.contentTitle = self.contentTitle
+            content.contentDescription = self.contentDesc
+            
+            let shareDialog: FBSDKShareDialog = FBSDKShareDialog()
+            shareDialog.shareContent = content
+            shareDialog.delegate = self
+            shareDialog.fromViewController = self
+            shareDialog.show()
         }
-        actionSheetController.addAction(choosePictureAction)
+        actionSheetController.addAction(shareFacebook)
         
-        //Present the AlertController
         self.presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+    func sharer(sharer: FBSDKSharing!, didCompleteWithResults results: [NSObject: AnyObject]) {
+        print(results)
+    }
+    
+    func sharer(sharer: FBSDKSharing!, didFailWithError error: NSError!) {
+        print("sharer NSError")
+        print(error.description)
+    }
+    
+    func sharerDidCancel(sharer: FBSDKSharing!) {
+        print("sharerDidCancel")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

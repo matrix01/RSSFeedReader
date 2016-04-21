@@ -238,7 +238,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Full News" id="lhC-ab-3xq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="x7a-ry-lHr">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="x7a-ry-lHr">
                             <connections>
                                 <action selector="shareSocialMedia:" destination="reA-19-uRs" id="KYd-VM-Sd4"/>
                             </connections>

@@ -16,12 +16,11 @@ class ShowNewsVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(feedUrl)
+
         let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
         dispatch_async(queue) { () -> Void in
             self.newNewsFeed.getNewsFeedWithUrl(self.feedUrl)
             dispatch_async(dispatch_get_main_queue(), {
-                print(self.newNewsFeed.posts)
                 self.tableView.reloadData()
                 self.loadImage()
             })
@@ -33,14 +32,18 @@ class ShowNewsVC: UITableViewController {
             let url = post.objectForKey("url") as! String
             if !url.isEmpty {
             let request = NSURLRequest(URL: NSURL(string: url)!)
-                NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { response, data, error in
-                    if let imageData = data {
-                        self.newsImage.addObject(UIImage(data: imageData)!)
-                        dispatch_async(dispatch_get_main_queue(), {
-                            self.tableView.reloadData()
-                        })
-                    }
+            let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+            let session = NSURLSession(configuration: config)
+                
+            let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
+                if let imageData = data {
+                    self.newsImage.addObject(UIImage(data: imageData)!)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.tableView.reloadData()
+                    })
                 }
+            });
+            task.resume()
             }
         }
     }
@@ -74,7 +77,7 @@ class ShowNewsVC: UITableViewController {
         let newsImageView: UIImageView = cell.viewWithTag(105) as! UIImageView
         if newsImage.count > 0 && indexPath.row < newsImage.count {
             let imageForNews = newsImage.objectAtIndex(indexPath.row)
-            newsImageView.image = imageForNews as! UIImage
+            newsImageView.image = imageForNews as? UIImage
         }
         
         return cell
@@ -83,7 +86,8 @@ class ShowNewsVC: UITableViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let destination = storyboard.instantiateViewControllerWithIdentifier("detailNews") as! DetailNewsVC
         destination.webLink = (self.newNewsFeed.posts.objectAtIndex(indexPath.row).objectForKey("link") as? String)!
-        
+        destination.contentTitle = (self.newNewsFeed.posts.objectAtIndex(indexPath.row).valueForKey("title") as? String)!
+        destination.contentDesc = (self.newNewsFeed.posts.objectAtIndex(indexPath.row).valueForKey("description") as? String)!
         navigationController?.pushViewController(destination, animated: true)
     }
 
