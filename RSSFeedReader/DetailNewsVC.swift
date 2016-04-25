@@ -12,7 +12,7 @@ import FBSDKShareKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class DetailNewsVC: UIViewController, FBSDKSharingDelegate, TWTRComposerViewControllerDelegate {
+class DetailNewsVC: UIViewController, FBSDKSharingDelegate, TWTRComposerViewControllerDelegate, GPPShareDelegate {
 
     @IBOutlet weak var detailNewsView: UIWebView!
     internal var webLink: String = ""
@@ -62,6 +62,14 @@ class DetailNewsVC: UIViewController, FBSDKSharingDelegate, TWTRComposerViewCont
             shareDialog.show()
         }
         actionSheetController.addAction(shareFacebook)
+        
+        let shareGooglePlus: UIAlertAction = UIAlertAction(title: "Share Google+", style: .Default) { action -> Void in
+            let shareDialog = GPPShare.sharedInstance().nativeShareDialog();
+            shareDialog.setURLToShare(NSURL(string: self.webLink));
+            
+            shareDialog.open();
+        }
+        actionSheetController.addAction(shareGooglePlus)
         
         self.presentViewController(actionSheetController, animated: true, completion: nil)
     }

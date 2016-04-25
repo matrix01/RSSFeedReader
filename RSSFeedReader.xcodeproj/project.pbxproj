@@ -11,6 +11,14 @@
 		EB383D4E1CC8C2A00082B024 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB383D4D1CC8C2A00082B024 /* FBSDKCoreKit.framework */; };
 		EB383D501CC8C2AB0082B024 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB383D4F1CC8C2AB0082B024 /* FBSDKLoginKit.framework */; };
 		EB383D521CC8C2BD0082B024 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB383D511CC8C2BD0082B024 /* FBSDKShareKit.framework */; };
+		EB429C7D1CCE0BF900122DA3 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB429C7C1CCE0BF900122DA3 /* AssetsLibrary.framework */; };
+		EB429C7F1CCE0D5300122DA3 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB429C7E1CCE0D5300122DA3 /* AddressBook.framework */; };
+		EB429C811CCE0D5F00122DA3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB429C801CCE0D5F00122DA3 /* MediaPlayer.framework */; };
+		EB429C831CCE0D6900122DA3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB429C821CCE0D6800122DA3 /* CoreMotion.framework */; };
+		EB429C851CCE0DA200122DA3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB429C841CCE0DA200122DA3 /* CoreLocation.framework */; };
+		EBAC73711CCA0A5D004A6A6E /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAC736E1CCA0A5D004A6A6E /* GoogleOpenSource.framework */; };
+		EBAC73721CCA0A5D004A6A6E /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EBAC736F1CCA0A5D004A6A6E /* GooglePlus.bundle */; };
+		EBAC73731CCA0A5D004A6A6E /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAC73701CCA0A5D004A6A6E /* GooglePlus.framework */; };
 		EBB6C8C11CC62EC1000E3581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */; };
 		EBB6C8C31CC62EC1000E3581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB6C8C21CC62EC1000E3581 /* ViewController.swift */; };
 		EBB6C8C61CC62EC1000E3581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB6C8C41CC62EC1000E3581 /* Main.storyboard */; };
@@ -33,6 +41,15 @@
 		EB383D4D1CC8C2A00082B024 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		EB383D4F1CC8C2AB0082B024 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		EB383D511CC8C2BD0082B024 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		EB429C7C1CCE0BF900122DA3 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		EB429C7E1CCE0D5300122DA3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		EB429C801CCE0D5F00122DA3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EB429C821CCE0D6800122DA3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EB429C841CCE0DA200122DA3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EBAC736E1CCA0A5D004A6A6E /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
+		EBAC736F1CCA0A5D004A6A6E /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
+		EBAC73701CCA0A5D004A6A6E /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
+		EBAC73741CCA1989004A6A6E /* RSSFeedReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSFeedReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBB6C8BD1CC62EC1000E3581 /* RSSFeedReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeedReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB6C8C01CC62EC1000E3581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB6C8C21CC62EC1000E3581 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +74,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB429C851CCE0DA200122DA3 /* CoreLocation.framework in Frameworks */,
+				EB429C831CCE0D6900122DA3 /* CoreMotion.framework in Frameworks */,
+				EB429C811CCE0D5F00122DA3 /* MediaPlayer.framework in Frameworks */,
+				EB429C7F1CCE0D5300122DA3 /* AddressBook.framework in Frameworks */,
+				EB429C7D1CCE0BF900122DA3 /* AssetsLibrary.framework in Frameworks */,
 				EBB6C8F41CC6B696000E3581 /* Fabric.framework in Frameworks */,
+				EBAC73731CCA0A5D004A6A6E /* GooglePlus.framework in Frameworks */,
+				EBAC73711CCA0A5D004A6A6E /* GoogleOpenSource.framework in Frameworks */,
 				EB383D4E1CC8C2A00082B024 /* FBSDKCoreKit.framework in Frameworks */,
 				EB383D521CC8C2BD0082B024 /* FBSDKShareKit.framework in Frameworks */,
 				EB383D501CC8C2AB0082B024 /* FBSDKLoginKit.framework in Frameworks */,
@@ -72,6 +96,9 @@
 		EB383D531CC8C40D0082B024 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				EBAC736E1CCA0A5D004A6A6E /* GoogleOpenSource.framework */,
+				EBAC736F1CCA0A5D004A6A6E /* GooglePlus.bundle */,
+				EBAC73701CCA0A5D004A6A6E /* GooglePlus.framework */,
 				EB383D511CC8C2BD0082B024 /* FBSDKShareKit.framework */,
 				EB383D4F1CC8C2AB0082B024 /* FBSDKLoginKit.framework */,
 				EB383D4D1CC8C2A00082B024 /* FBSDKCoreKit.framework */,
@@ -96,6 +123,11 @@
 		EBB6C8B41CC62EC0000E3581 = {
 			isa = PBXGroup;
 			children = (
+				EB429C841CCE0DA200122DA3 /* CoreLocation.framework */,
+				EB429C821CCE0D6800122DA3 /* CoreMotion.framework */,
+				EB429C801CCE0D5F00122DA3 /* MediaPlayer.framework */,
+				EB429C7E1CCE0D5300122DA3 /* AddressBook.framework */,
+				EB429C7C1CCE0BF900122DA3 /* AssetsLibrary.framework */,
 				EBB6C8BF1CC62EC1000E3581 /* RSSFeedReader */,
 				EBB6C8BE1CC62EC1000E3581 /* Products */,
 			);
@@ -124,6 +156,7 @@
 				EBFE0CC51CC72D8A006B443F /* ShowNewsVC.swift */,
 				EB20B7FC1CC7700300E16391 /* DetailNewsVC.swift */,
 				EB383D541CC8C4290082B024 /* Images */,
+				EBAC73741CCA1989004A6A6E /* RSSFeedReader-Bridging-Header.h */,
 			);
 			path = RSSFeedReader;
 			sourceTree = "<group>";
@@ -189,6 +222,7 @@
 			files = (
 				EBD8679D1CC828D700BD9CBF /* clk.png in Resources */,
 				EBB6C8F61CC6B696000E3581 /* TwitterKitResources.bundle in Resources */,
+				EBAC73721CCA0A5D004A6A6E /* GooglePlus.bundle in Resources */,
 				EBD8679F1CC8811300BD9CBF /* background.jpg in Resources */,
 				EBD8679B1CC81A3200BD9CBF /* bbc.png in Resources */,
 				EBB6C8CB1CC62EC1000E3581 /* LaunchScreen.storyboard in Resources */,
@@ -340,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -347,8 +382,11 @@
 				);
 				INFOPLIST_FILE = RSSFeedReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = saosx.com.RSSFeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSFeedReader/RSSFeedReader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -356,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -363,8 +402,10 @@
 				);
 				INFOPLIST_FILE = RSSFeedReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = saosx.com.RSSFeedReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSFeedReader/RSSFeedReader-Bridging-Header.h";
 			};
 			name = Release;
 		};
